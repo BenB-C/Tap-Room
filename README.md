@@ -1,3 +1,19 @@
+# Keg Tap
+
+#### Epicodus React - React Fundamentals - 2019.09.06
+
+#### By Ben Bennett-Cauchon
+
+## Description
+
+A tap room in React where a bar can track their kegs.
+
+## Component and Route Structure
+
+![](app-diagram.png)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
