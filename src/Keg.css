@@ -1,0 +1,19 @@
+.Keg {
+  font-size: 1.5em;
+}
+
+.Keg-name {
+  font-weight: bold;
+}
+
+.Keg-brand {
+  font-style: italic;
+}
+
+.Keg-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
