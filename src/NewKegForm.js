@@ -5,7 +5,7 @@ import './NewKegForm.css'
 function NewKegForm(){
   return (
     <div className='NewKegForm'>
-    <Link to='/' className='NewKegForm-link'>Back to Keg List</Link>
+      <h1>Add a New Keg</h1>
       <form>
         <input
           type='text'
@@ -27,8 +27,9 @@ function NewKegForm(){
           type='number'
           id='pints'
           placeholder='Pints'/>
-        <button type='submit'>Add Keg</button>
+        <button type='submit'>Submit</button>
       </form>
+      <Link to='/' className='NewKegForm-link'>Cancel</Link>
     </div>
   );
 }

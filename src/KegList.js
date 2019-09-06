@@ -37,7 +37,7 @@ var masterKegList = [
 function KegList(){
   return (
     <div className='KegList'>
-      <Link to='/newkeg' className='KegList-link'>Add a Keg</Link>
+      <h1>Available Kegs</h1>
       <hr/>
       {masterKegList.map((keg, index) =>
         <Keg name={keg.name}
@@ -47,6 +47,7 @@ function KegList(){
           pints={keg.pints}          
           key={index}/>
       )}
+      <Link to='/newkeg' className='KegList-link'>Add a Keg</Link>
     </div>
   );
 }
