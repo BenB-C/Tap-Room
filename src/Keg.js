@@ -2,13 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Keg.css';
 
-function Keg(props){
+function Keg(props) {
+  const priceStyles = {
+    color: 'red',
+    fontWeight: 'bold'
+  }
+  if (props.price < 5) {
+    priceStyles.color = 'green';
+  } 
+  
   return (
     <div className='Keg'>
       <div className='Keg-info' id='Keg-name'>{props.name}</div>
       <div className='Keg-info' id='Keg-brand'>{props.brand}</div>
       <div className='Keg-info'>
-        <div id='price'>Price: ${props.price}</div>
+        <div id='price' style={priceStyles}>Price: ${props.price}</div>
         <div id='alcoholContent'>ABV: {props.alcoholContent}%</div>
         <div id='pints'>Pints: {props.pints}</div>
       </div>

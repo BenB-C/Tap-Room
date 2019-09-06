@@ -35,3 +35,10 @@
   margin-right: 0px;
 }
 
+.Keg-price-expensive {
+  color: red;
+}
+
+.Keg-price-cheap {
+  color: green;
+}
