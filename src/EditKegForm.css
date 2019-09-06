@@ -1,0 +1,20 @@
+.EditKegForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.EditKegForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.EditKegForm input, .EditKegForm button, .EditKegForm-link {
+  font-size: 24px;
+  margin: 3px 0;
+}
+
+.EditKegForm button {
+  align-self: center;
+}
