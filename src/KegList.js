@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Keg from './Keg';
+import './KegList.css'
 
 var masterKegList = [
   {
@@ -34,7 +36,8 @@ var masterKegList = [
 
 function KegList(){
   return (
-    <div>
+    <div className='KegList'>
+      <Link to='/newkeg' className='KegList-link'>Add a Keg</Link>
       <hr/>
       {masterKegList.map((keg, index) =>
         <Keg name={keg.name}
