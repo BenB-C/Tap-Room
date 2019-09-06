@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Keg.css';
+import minus from './minus.png';
 
 function Keg(props) {
   const priceStyles = {
@@ -25,7 +26,7 @@ function Keg(props) {
           <button>Edit</button>
           <button>Delete</button>
         </div>
-        <button id='Keg-button-sell'>Sell Pint</button>
+        <input type='image' src={minus} title='Subtract a Pint' className='Keg-button-minus' />
       </div>
       <hr/>
     </div>

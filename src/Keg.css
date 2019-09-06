@@ -31,8 +31,9 @@
   padding: 5px 0;
 }
 
-.Keg-button-sell {
-  margin-right: 0px;
+.Keg-button-minus {
+  width: 25px;
+  height: 25px;
 }
 
 .Keg-price-expensive {
