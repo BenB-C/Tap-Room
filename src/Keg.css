@@ -1,13 +1,14 @@
 .Keg {
   font-size: 1.5em;
-  margin: 0 10px;
+  width: 600px;
+  padding: 10px 0;
 }
 
-.Keg-name {
+#Keg-name {
   font-weight: bold;
 }
 
-.Keg-brand {
+#Keg-brand {
   font-style: italic;
 }
 
@@ -16,15 +17,21 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  
+  padding: 5px 0;
 }
 
 .Keg button {
   font-size: 1em;
 }
 
-.Keg-pints {
+.Keg-buttons-container {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 0;
 }
+
+.Keg-button-sell {
+  margin-right: 0px;
+}
+

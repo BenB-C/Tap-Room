@@ -5,11 +5,20 @@ import './Keg.css';
 function Keg(props){
   return (
     <div className='Keg'>
-      <p><span className='Keg-name'>{props.name}</span> - <span className='Keg-brand'>{props.brand}</span></p>
-      <p className='Keg-info'><span className='Keg-price'>Price: ${props.price}</span> <span className='Keg-alcoholContent'>ABV: {props.alcoholContent}%</span> <span className='Keg-pints'>Pints: {props.pints}<button>Sell Pint</button></span></p>
-      
-      <button>Edit</button>
-      <button>Delete</button>
+      <div className='Keg-info' id='Keg-name'>{props.name}</div>
+      <div className='Keg-info' id='Keg-brand'>{props.brand}</div>
+      <div className='Keg-info'>
+        <div id='price'>Price: ${props.price}</div>
+        <div id='alcoholContent'>ABV: {props.alcoholContent}%</div>
+        <div id='pints'>Pints: {props.pints}</div>
+      </div>
+      <div className='Keg-buttons-container'>
+        <div>
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+        <button id='Keg-button-sell'>Sell Pint</button>
+      </div>
       <hr/>
     </div>
   );
