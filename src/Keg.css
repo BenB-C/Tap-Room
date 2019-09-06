@@ -1,50 +1,16 @@
 .Keg {
   font-size: 1.5em;
-  width: 600px;
+  /* width: 600px; */
 }
 
-#Keg-name {
-  font-weight: bold;
-}
-
-#Keg-brand {
-  font-style: italic;
-}
-
-.Keg-info-container {
-  padding: 15px;
-}
-
-.Keg-info {
+.Keg-info-and-bar {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 5px 0;
-}
-
-.Keg-buttons-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 0;
-}
-
-
-.Keg button {
-  font-size: 1em;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .Keg-button-minus {
   width: 25px;
   height: 25px;
-}
-
-.Keg-price-expensive {
-  color: red;
-}
-
-.Keg-price-cheap {
-  color: green;
 }

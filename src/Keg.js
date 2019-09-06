@@ -1,43 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import KegInfo from './KegInfo.js';
+import VerticalBar from './VerticalBar.js';
 import './Keg.css';
 import minus from './minus.png';
 
 function Keg(props) {
-  const priceStyles = {
-    color: 'red',
-    fontWeight: 'bold'
-  }
-  if (props.price < 5) {
-    priceStyles.color = 'green';
-  } 
-  const kegStyles = {
-    backgroundColor: '#d1ac6e' // For lower ABV beers
-  }
-  if (props.alcoholContent > 5) {
-    kegStyles.backgroundColor = '#966d28'; // For higher ABV beers
-  }
-  
   return (
     <div className='Keg'>
-      <div style={kegStyles} className='Keg-info-container'>
-        <div className='Keg-info' id='Keg-name'>{props.name}</div>
-        <div className='Keg-info' id='Keg-brand'>{props.brand}</div>
-        <div className='Keg-info'>
-          <div id='price' style={priceStyles}>Price: ${props.price}</div>
-          <div id='alcoholContent'>ABV: {props.alcoholContent}%</div>
-          <div id='pints'>Pints: {props.pints}</div>
-        </div>
-        <div className='Keg-buttons-container'>
-          <div>
-            <button>Edit</button>
-            <button>Delete</button>
-          </div>
-          <input type='image' src={minus} alt='minus button' title='Subtract a Pint' className='Keg-button-minus' />
-        </div>
+      <div className='Keg-info-and-bar'>
+        <KegInfo
+          name={props.name}
+          brand={props.brand}
+          price={props.price}
+          alcoholContent={props.alcoholContent}
+          pints={props.pints}
+        />
+        <VerticalBar
+          width={'50px'}
+          height={props.pints}
+          color={'green'}
+          label={props.pints + ' pints left'}
+        />
+        <input type='image' src={minus} alt='minus button' title='Subtract a Pint' className='Keg-button-minus' />
       </div>
-      <hr/>
-    </div>
+      <hr />
+    </div>    
   );
 }
 
