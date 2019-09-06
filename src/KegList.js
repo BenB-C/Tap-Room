@@ -7,28 +7,28 @@ var masterKegList = [
   {
     name: 'Coors Light',
     brand: 'Coors Brewing Company',
-    price: 134.99,
+    price: 3,
     alcoholContent: 4.2,
     pints: 124
   },
   {
     name: 'Belgian White Ale',
     brand: 'Blue Moon Brewing Company',
-    price: 169.99,
+    price: 5,
     alcoholContent: 5.4,
     pints: 124
   },
   {
     name: 'Especial',
     brand: 'Modelo',
-    price: 194.99,
+    price: 6,
     alcoholContent: 4.4,
     pints: 124
   },
   {
     name: 'Bud Light',
     brand: 'Anheuser-Busch',
-    price: 134.99,
+    price: 3,
     alcoholContent: 4.2,
     pints: 124
   },
