@@ -33,7 +33,7 @@ function Keg(props) {
             <button>Edit</button>
             <button>Delete</button>
           </div>
-          <input type='image' src={minus} title='Subtract a Pint' className='Keg-button-minus' />
+          <input type='image' src={minus} alt='minus button' title='Subtract a Pint' className='Keg-button-minus' />
         </div>
       </div>
       <hr/>
