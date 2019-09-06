@@ -1,5 +1,6 @@
 .Keg {
   font-size: 1.5em;
+  margin: 0 10px;
 }
 
 .Keg-name {
@@ -13,7 +14,17 @@
 .Keg-info {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   
+}
+
+.Keg button {
+  font-size: 1em;
+}
+
+.Keg-pints {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
