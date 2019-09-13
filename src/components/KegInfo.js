@@ -6,11 +6,11 @@ import './KegInfo.css';
 function KegInfo(props) {
   const keg = props.keg;
   const priceStyles = {}
-  if (keg.price > 5) {
+  if (keg.price >= 5) {
     priceStyles.fontWeight = 'bold';
   }
   const abvStyles = {}
-  if (keg.alcoholContent > 5) {
+  if (keg.alcoholContent >= 5) {
     abvStyles.fontWeight = 'bold';
   }
 
