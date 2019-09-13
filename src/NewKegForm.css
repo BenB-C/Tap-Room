@@ -18,3 +18,7 @@
 .NewKegForm button {
   align-self: center;
 }
+
+.NewKegForm input {
+  width: 400px;
+}

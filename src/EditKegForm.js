@@ -63,7 +63,7 @@ function EditKegForm(props){
           ref={(input) => {_pints = input;}} />
         <button type='submit' onClick={handleSubmitEditKeg}>Submit</button>
       </form>
-      <Link to='/' className='EditKegForm-link'>Cancel</Link>
+      <Link to='/' className='EditKegForm-link'><button>Cancel</button></Link>
     </div>
   );
 }

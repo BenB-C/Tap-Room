@@ -25,7 +25,7 @@ function NewKegForm(props){
     _price.value = '';
     _pints.value = '';
   }
-  
+
   return (
     <div className='NewKegForm'>
       <h1>Add a New Keg</h1>
@@ -57,7 +57,7 @@ function NewKegForm(props){
           ref={(input) => {_pints = input;}} />
         <button type='submit' onClick={handleNewKegFormSubmission}>Submit</button>
       </form>
-      <Link to='/' className='NewKegForm-link'><button>Cancel</button></Link>
+      <Link to='/' className='NewKegForm-link'>Back to Keg List</Link>
     </div>
   );
 }

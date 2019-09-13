@@ -5,7 +5,11 @@
   align-items: center;
 }
 
-.KegList-link {
+.KegList-button {
   font-size: 1.5em;
-  margin-left: 10px;
+  margin: 5px 0;
+}
+
+.KegList h1 {
+  margin: 5px;
 }

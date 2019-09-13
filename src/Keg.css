@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  /* height: 180px; */
+  height: 180px;
   width: 500px;
   border: solid black 1px;
   padding: 10px;
