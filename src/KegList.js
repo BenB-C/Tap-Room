@@ -17,7 +17,8 @@ function KegList(props){
           alcoholContent={keg.alcoholContent}
           pints={keg.pints}
           kegIndex={index}
-          key={index} />
+          key={index}
+          onMinusPint={props.onMinusPint} />
       )}
     </div>
   );
@@ -25,6 +26,7 @@ function KegList(props){
 
 KegList.propTypes = {
   kegList: PropTypes.array.isRequired,
+  onMinusPint: PropTypes.func.isRequired
 };
 
 export default KegList;

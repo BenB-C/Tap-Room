@@ -51,13 +51,20 @@ class App extends React.Component {
     this.setState({kegList: newKegList});
   }
 
+  handleMinusPint = kegIndex => {
+    const newKegList = this.state.kegList;
+    const keg = newKegList[kegIndex];
+    if (keg.pints > 0) keg.pints--;
+    this.setState({kegList: newKegList});
+  }
+
   render() {
     return (
       <div className='App'>
         <Header />
         <Router>
           <Switch>
-            <Route exact path='/' render={() => <KegList kegList={this.state.kegList} />} />
+            <Route exact path='/' render={() => <KegList kegList={this.state.kegList} onMinusPint={this.handleMinusPint}/>} />
             <Route path='/newkeg' render={() => <NewKegForm onAddKeg={this.handleAddKeg} />} />
             <Route path='/editkeg' component={EditKegForm} />
             <Route component={Error404} />

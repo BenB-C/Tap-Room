@@ -17,12 +17,18 @@ function Keg(props) {
           pints={props.pints}
         />
         <VerticalBar
-          width={'50px'}
+          width={'75px'}
           height={props.pints + 'px'}
           color={'green'}
-          label={props.pints + ' pints left'}
+          label={props.pints + ' pints'}
         />
-        <input type='image' src={minus} alt='minus button' title='Subtract a Pint' className='Keg-button-minus' />
+        <input
+          type='image'
+          src={minus}
+          alt='minus button'
+          title='Subtract a Pint'
+          className='Keg-button-minus'
+          onClick={() => props.onMinusPint(props.kegIndex) }/>
       </div>
       <hr />
     </div>
@@ -34,7 +40,9 @@ Keg.propTypes = {
   brand: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   alcoholContent: PropTypes.number.isRequired,
-  pints: PropTypes.number.isRequired
+  pints: PropTypes.number.isRequired,
+  kegIndex: PropTypes.number.isRequired,
+  onMinusPint: PropTypes.func.isRequired
 };
 
 export default Keg;
