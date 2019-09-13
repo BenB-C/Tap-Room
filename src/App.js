@@ -77,6 +77,7 @@ class App extends React.Component {
   handleDeleteKeg = keg => {
     const newKegList = this.state.kegList.filter(value => value !== keg);
     this.setState({kegList: newKegList});
+    this.kegListToShow = newKegList;
   }
 
   handleFilterList = shouldFilter => {
