@@ -7,20 +7,60 @@ import EditKegForm from './EditKegForm.js';
 import Error404 from './Error404.js';
 import './App.css';
 
-function App() {
-  return (
-    <div className='App'>
-      <Header />
-      <Router>
-        <Switch>
-          <Route exact path='/' component={KegList} />
-          <Route path='/newkeg' component={NewKegForm} />
-          <Route path='/editkeg/id' component={EditKegForm} />
-          <Route component={Error404} />
-        </Switch>
-      </Router>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      kegList: [
+        {
+          name: 'Coors Light',
+          brand: 'Coors Brewing Company',
+          price: 3,
+          alcoholContent: 4.2,
+          pints: 124
+        },
+        {
+          name: 'Belgian White Ale',
+          brand: 'Blue Moon Brewing Company',
+          price: 5,
+          alcoholContent: 5.4,
+          pints: 124
+        },
+        {
+          name: 'Especial',
+          brand: 'Modelo',
+          price: 6,
+          alcoholContent: 4.4,
+          pints: 124
+        },
+        {
+          name: 'Bud Light',
+          brand: 'Anheuser-Busch',
+          price: 3,
+          alcoholContent: 4.2,
+          pints: 124
+        }
+      ]
+    };
+  }
+
+  render() {
+    return (
+      <div className='App'>
+        <Header />
+        <Router>
+          <Switch>
+            <Route exact path='/' render={() => <KegList kegList={this.state.kegList} />} />
+            <Route path='/newkeg' component={NewKegForm} />
+            <Route path='/editkeg' component={EditKegForm} />
+            <Route component={Error404} />
+          </Switch>
+        </Router>
+      </div>
+    );
+  }
+
 }
 
 export default App;
