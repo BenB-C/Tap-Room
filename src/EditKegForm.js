@@ -48,18 +48,21 @@ function EditKegForm(props){
           type='number'
           id='alcoholContent'
           defaultValue={keg.alcoholContent}
+          min='0'
           ref={(input) => {_alcoholContent = input;}} />
         Price
         <input
           type='number'
           id='price'
           defaultValue={keg.price}
+          min='0'
           ref={(input) => {_price = input;}} />
         Pints
         <input
           type='number'
           id='pints'
           defaultValue={keg.pints}
+          min='0'
           ref={(input) => {_pints = input;}} />
         <button type='submit' onClick={handleSubmitEditKeg}>Submit</button>
       </form>

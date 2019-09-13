@@ -40,16 +40,19 @@ function NewKegForm(props){
           type='number'
           id='alcoholContent'
           placeholder='ABV'
+          min='0'
           ref={(input) => {_alcoholContent = input;}} />
         <input
           type='number'
           id='price'
           placeholder='Price'
+          min='0'
           ref={(input) => {_price = input;}} />
         <input
           type='number'
           id='pints'
           placeholder='Pints'
+          min='0'
           ref={(input) => {_pints = input;}} />
         <button type='submit' onClick={handleNewKegFormSubmission}>Submit</button>
       </form>
