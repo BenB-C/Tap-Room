@@ -39,7 +39,8 @@ function KegInfo(props) {
 }
 
 KegInfo.propTypes = {
-  keg: PropTypes.object.isRequired
+  keg: PropTypes.object.isRequired,
+  onDeleteKeg: PropTypes.func.isRequired
 };
 
 export default KegInfo;
