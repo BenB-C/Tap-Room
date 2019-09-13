@@ -8,11 +8,17 @@
 
 A tap room in React where a bar can track their kegs.
 
-## Component and Route Structure
+## Initial Component and Route Structure
 
 ![](app-diagram.png)
 
+## Updated Component and Route Structure with state
 
+I removed the control and confirmation questions components because I don't think I'll need them. I also removed the DeleteKeg component as I think this can be handled through App and Keg without needing another conponent. I also removed :id from the editkeg route and will instead pass the keg's index in the list to EditKegForm through a prop in the Link to it.
+
+![](app-diagram-2.png)
+
+<hr/>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
