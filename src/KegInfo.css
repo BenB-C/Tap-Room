@@ -1,8 +1,8 @@
 .KegInfo {
   font-size: 1.5em;
-  width: 700px;
+  width: 100%;
   flex-direction: column;
-  align-items: center;
+  align-items: fles-start;
   justify-content: flex-start;
 }
 
@@ -14,14 +14,6 @@
   font-style: italic;
 }
 
-.KegInfo-name-and-buttons-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
 button {
   font-size: 0.7em;
 }
-

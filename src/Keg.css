@@ -1,13 +1,19 @@
 .Keg {
-  font-size: 1.5em;
-  /* width: 600px; */
-}
-
-.Keg-info-and-bar {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: stretch;
+  /* height: 180px; */
+  width: 500px;
+  border: solid black 1px;
+  padding: 10px;
+}
+
+.Keg-bar-and-minus-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .Keg-button-minus {

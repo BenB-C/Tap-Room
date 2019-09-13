@@ -7,19 +7,29 @@ import minus from './minus.png';
 
 function Keg(props) {
   const keg = props.keg;
+  let barColor = null;
+  if (keg.pints < 10) {
+    barColor = 'red';
+  } else {
+    barColor = 'green';
+  }
+  const kegStyles = {
+    backgroundColor: '#d1ac6e' // For lower ABV beers
+  }
+  if (keg.alcoholContent > 5) {
+    kegStyles.backgroundColor = '#966d28'; // For higher ABV beers
+  }
   return (
-    <div className='Keg'>
-      <div className='Keg-info-and-bar'>
-        <KegInfo
-          keg={keg}
-          onDeleteKeg={props.onDeleteKeg}
-        />
+    <div className='Keg' style={kegStyles}>
+      <KegInfo className = 'Keg-KegInfo'
+        keg={keg}
+        onDeleteKeg={props.onDeleteKeg} />
+      <div className='Keg-bar-and-minus-button'>
         <VerticalBar
-          width={'75px'}
+          width={'80px'}
           height={keg.pints + 'px'}
-          color={'green'}
-          label={keg.pints + ' pints'}
-        />
+          color={barColor}
+          label={keg.pints + ' pints'} />
         <input
           type='image'
           src={minus}
@@ -28,7 +38,6 @@ function Keg(props) {
           className='Keg-button-minus'
           onClick={() => props.onMinusPint(keg) }/>
       </div>
-      <hr />
     </div>
   );
 }
