@@ -11,12 +11,8 @@ function KegList(props){
       <h1>Available Kegs</h1>
       <hr/>
       {props.kegList.map((keg, index) =>
-        <Keg name={keg.name}
-          brand={keg.brand}
-          price={keg.price}
-          alcoholContent={keg.alcoholContent}
-          pints={keg.pints}
-          kegIndex={index}
+        <Keg
+          keg={keg}
           key={index}
           onMinusPint={props.onMinusPint} />
       )}

@@ -25,6 +25,7 @@ function NewKegForm(props){
     _price.value = '';
     _pints.value = '';
   }
+  
   return (
     <div className='NewKegForm'>
       <h1>Add a New Keg</h1>

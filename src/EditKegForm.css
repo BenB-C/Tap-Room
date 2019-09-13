@@ -15,6 +15,10 @@
   margin: 3px 0;
 }
 
+.EditKegForm input {
+  width: 400px;
+}
+
 .EditKegForm button {
   align-self: center;
 }

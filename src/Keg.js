@@ -6,21 +6,18 @@ import './Keg.css';
 import minus from './minus.png';
 
 function Keg(props) {
+  const keg = props.keg;
   return (
     <div className='Keg'>
       <div className='Keg-info-and-bar'>
         <KegInfo
-          name={props.name}
-          brand={props.brand}
-          price={props.price}
-          alcoholContent={props.alcoholContent}
-          pints={props.pints}
+          keg={keg}
         />
         <VerticalBar
           width={'75px'}
-          height={props.pints + 'px'}
+          height={keg.pints + 'px'}
           color={'green'}
-          label={props.pints + ' pints'}
+          label={keg.pints + ' pints'}
         />
         <input
           type='image'
@@ -28,7 +25,7 @@ function Keg(props) {
           alt='minus button'
           title='Subtract a Pint'
           className='Keg-button-minus'
-          onClick={() => props.onMinusPint(props.kegIndex) }/>
+          onClick={() => props.onMinusPint(keg) }/>
       </div>
       <hr />
     </div>
@@ -36,12 +33,7 @@ function Keg(props) {
 }
 
 Keg.propTypes = {
-  name: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  alcoholContent: PropTypes.number.isRequired,
-  pints: PropTypes.number.isRequired,
-  kegIndex: PropTypes.number.isRequired,
+  keg: PropTypes.object.isRequired,
   onMinusPint: PropTypes.func.isRequired
 };
 

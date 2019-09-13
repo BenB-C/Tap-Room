@@ -51,11 +51,18 @@ class App extends React.Component {
     this.setState({kegList: newKegList});
   }
 
-  handleMinusPint = kegIndex => {
-    const newKegList = this.state.kegList;
-    const keg = newKegList[kegIndex];
+  handleMinusPint = keg => {
     if (keg.pints > 0) keg.pints--;
-    this.setState({kegList: newKegList});
+    this.setState({state: this.state});
+  }
+
+  handleEditKeg = (keg, newAttributes) => {
+    keg.name = newAttributes.name;
+    keg.brand = newAttributes.brand;
+    keg.price = newAttributes.price;
+    keg.alcoholContent = newAttributes.alcoholContent;
+    keg.pints = newAttributes.pints;
+    this.setState({state: this.state});
   }
 
   render() {
@@ -64,9 +71,14 @@ class App extends React.Component {
         <Header />
         <Router>
           <Switch>
-            <Route exact path='/' render={() => <KegList kegList={this.state.kegList} onMinusPint={this.handleMinusPint}/>} />
+            <Route exact path='/' render={() => <KegList
+                kegList={this.state.kegList}
+                onMinusPint={this.handleMinusPint}
+                onEditKeg={this.handleEditKeg} />} />
             <Route path='/newkeg' render={() => <NewKegForm onAddKeg={this.handleAddKeg} />} />
-            <Route path='/editkeg' component={EditKegForm} />
+            <Route path='/editkeg' render={(props) => <EditKegForm
+                keg={props.location.state.keg}
+                onEditKeg={this.handleEditKeg} />} />
             <Route component={Error404} />
           </Switch>
         </Router>
