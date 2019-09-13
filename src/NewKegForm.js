@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './NewKegForm.css'
 
 function NewKegForm(props){
@@ -19,11 +19,7 @@ function NewKegForm(props){
       price: parseInt(_price.value),
       pints: parseInt(_pints.value)
     });
-    _name.value = '';
-    _brand.value = '';
-    _alcoholContent.value = '';
-    _price.value = '';
-    _pints.value = '';
+    props.history.push('/');
   }
 
   return (
@@ -57,7 +53,7 @@ function NewKegForm(props){
           ref={(input) => {_pints = input;}} />
         <button type='submit' onClick={handleNewKegFormSubmission}>Submit</button>
       </form>
-      <Link to='/' className='NewKegForm-link'>Back to Keg List</Link>
+      <Link to='/' className='NewKegForm-link'><button>Cancel</button></Link>
     </div>
   );
 }
@@ -66,4 +62,4 @@ NewKegForm.propTypes = {
   onAddKeg: PropTypes.func.isRequired
 };
 
-export default NewKegForm;
+export default withRouter(NewKegForm);
