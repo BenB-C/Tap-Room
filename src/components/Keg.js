@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import KegInfo from './KegInfo.js';
 import VerticalBar from './VerticalBar.js';
 import './Keg.css';
-import minus from './minus.png';
+import minus from './../images/minus.png';
 
 function Keg(props) {
   const keg = props.keg;
