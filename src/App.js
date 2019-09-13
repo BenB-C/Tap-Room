@@ -56,7 +56,7 @@ class App extends React.Component {
 
   handleAddKeg = newKeg => {
     const newKegList = this.state.kegList;
-    newKegList.push(newKeg);
+    newKegList.unshift(newKeg);
     this.setState({kegList: newKegList});
   }
 
