@@ -45,6 +45,12 @@ class App extends React.Component {
     };
   }
 
+  handleAddKeg = newKeg => {
+    const newKegList = this.state.kegList;
+    newKegList.push(newKeg);
+    this.setState({kegList: newKegList});
+  }
+
   render() {
     return (
       <div className='App'>
@@ -52,7 +58,7 @@ class App extends React.Component {
         <Router>
           <Switch>
             <Route exact path='/' render={() => <KegList kegList={this.state.kegList} />} />
-            <Route path='/newkeg' component={NewKegForm} />
+            <Route path='/newkeg' render={() => <NewKegForm onAddKeg={this.handleAddKeg} />} />
             <Route path='/editkeg' component={EditKegForm} />
             <Route component={Error404} />
           </Switch>

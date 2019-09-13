@@ -18,14 +18,14 @@ function Keg(props) {
         />
         <VerticalBar
           width={'50px'}
-          height={props.pints}
+          height={props.pints + 'px'}
           color={'green'}
           label={props.pints + ' pints left'}
         />
         <input type='image' src={minus} alt='minus button' title='Subtract a Pint' className='Keg-button-minus' />
       </div>
       <hr />
-    </div>    
+    </div>
   );
 }
 

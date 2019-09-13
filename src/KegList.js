@@ -1,25 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Keg from './Keg';
-import './KegList.css'
+import './KegList.css';
 
 function KegList(props){
-  const kegList = props.kegList;
   return (
     <div className='KegList'>
+      <Link to='/newkeg' className='KegList-link'><button>Add a Keg</button></Link>
       <h1>Available Kegs</h1>
       <hr/>
-      {kegList.map((keg, index) =>
+      {props.kegList.map((keg, index) =>
         <Keg name={keg.name}
           brand={keg.brand}
           price={keg.price}
           alcoholContent={keg.alcoholContent}
           pints={keg.pints}
-          key={index}/>
+          kegIndex={index}
+          key={index} />
       )}
-      <Link to='/newkeg' className='KegList-link'>Add a Keg</Link>
     </div>
   );
 }
+
+KegList.propTypes = {
+  kegList: PropTypes.array.isRequired,
+};
 
 export default KegList;
