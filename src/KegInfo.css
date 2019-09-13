@@ -6,10 +6,6 @@
   justify-content: flex-start;
 }
 
-.KegInfo-name {
-  font-weight: bold;
-}
-
 .KegInfo-brand {
   font-style: italic;
 }
