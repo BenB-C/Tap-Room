@@ -5,6 +5,10 @@ import './EditKegForm.css';
 
 function EditKegForm(props){
   const keg = props.keg;
+  if (!keg) {
+    props.history.push('/');
+    return null;
+  }
   let _name = null;
   let _brand = null;
   let _alcoholContent = null;

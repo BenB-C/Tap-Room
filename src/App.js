@@ -83,7 +83,7 @@ class App extends React.Component {
                 onDeleteKeg={this.handleDeleteKeg} />} />
             <Route path='/newkeg' render={() => <NewKegForm onAddKeg={this.handleAddKeg} />} />
             <Route path='/editkeg' render={(props) => <EditKegForm
-                keg={props.location.state.keg}
+                keg={props.location.state ? props.location.state.keg : null}
                 onEditKeg={this.handleEditKeg} />} />
             <Route component={Error404} />
           </Switch>
