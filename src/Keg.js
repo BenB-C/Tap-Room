@@ -12,6 +12,7 @@ function Keg(props) {
       <div className='Keg-info-and-bar'>
         <KegInfo
           keg={keg}
+          onDeleteKeg={props.onDeleteKeg}
         />
         <VerticalBar
           width={'75px'}

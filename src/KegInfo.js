@@ -19,6 +19,10 @@ function KegInfo(props) {
     kegStyles.backgroundColor = '#966d28'; // For higher ABV beers
   }
 
+  function handleClickOnDelete() {
+    props.onDeleteKeg(keg);
+  }
+
   return (
     <div style={kegStyles} className='KegInfo'>
       <div className='KegInfo-name-and-buttons-container'>
@@ -28,7 +32,7 @@ function KegInfo(props) {
               pathname: '/editkeg',
               state: { keg: props.keg }
             }}><button>Edit</button></Link>
-          <button>Delete</button>
+          <button onClick={handleClickOnDelete}>Delete</button>
         </div>
       </div>
       <div className='KegInfo-brand'>{keg.brand}</div>

@@ -65,6 +65,11 @@ class App extends React.Component {
     this.setState({state: this.state});
   }
 
+  handleDeleteKeg = keg => {
+    const newKegList = this.state.kegList.filter(value => value !== keg);
+    this.setState({kegList: newKegList});
+  }
+
   render() {
     return (
       <div className='App'>
@@ -74,7 +79,8 @@ class App extends React.Component {
             <Route exact path='/' render={() => <KegList
                 kegList={this.state.kegList}
                 onMinusPint={this.handleMinusPint}
-                onEditKeg={this.handleEditKeg} />} />
+                onEditKeg={this.handleEditKeg}
+                onDeleteKeg={this.handleDeleteKeg} />} />
             <Route path='/newkeg' render={() => <NewKegForm onAddKeg={this.handleAddKeg} />} />
             <Route path='/editkeg' render={(props) => <EditKegForm
                 keg={props.location.state.keg}
